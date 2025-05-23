@@ -5,7 +5,7 @@ const Heading = () => {
 const List = (props) => {
   return (
     <ul>
-      <li style={{ color: "yellow", backgroundColor: "dodgerblue" }}>
+      <li style={{ color: props.text, backgroundColor: "dodgerblue" }}>
         {props.name}
       </li>
       <li>{props.name1}</li>
