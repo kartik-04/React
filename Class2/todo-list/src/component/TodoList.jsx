@@ -15,6 +15,7 @@ const TodoList = ({ title, myStyle }) => {
   const handleAddTodo = (e) => {
     const newItems = [...Items, newItem];
     setItems(newItems);
+    setNewItem("");
   };
   const handleChange = (e) => {
     setNewItem(e.target.value);
@@ -27,6 +28,7 @@ const TodoList = ({ title, myStyle }) => {
           type="text"
           placeholder="Enter new Todo"
           onChange={handleChange}
+          value={newItem}
         />
         <button onClick={handleAddTodo}>Add</button>
       </div>
