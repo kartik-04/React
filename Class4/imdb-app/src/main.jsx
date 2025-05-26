@@ -16,6 +16,7 @@ createRoot(document.getElementById("root")).render(
         <Route path="/" element={<MovieListPage />} />
         <Route path="/details" element={<MovieDetailsPage />} />
         <Route path="/watchlist" element={<WatchList />} />
+        <Route path="*" element={<h1>Page Not Found</h1>} />
       </Routes>
     </StrictMode>
   </BrowserRouter>

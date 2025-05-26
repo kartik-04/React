@@ -1,4 +1,5 @@
-import "./App.css";
+import "../App.css";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -6,13 +7,13 @@ const Header = () => {
       <h1>IMDB</h1>
       <ul>
         <li>
-          <a href="/">Movies</a>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <a href="/details">Detail</a>
+          <Link to="/details">Detail</Link>
         </li>
         <li>
-          <a href="/watchlist">Watch List</a>
+          <Link to="/watchlist">WatchList</Link>
         </li>
       </ul>
     </div>
