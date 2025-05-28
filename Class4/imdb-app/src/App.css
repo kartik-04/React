@@ -28,6 +28,7 @@ html {
 
 .header h1 {
   font-size: 20px;
+  color: black;
 }
 
 .header ul {
@@ -37,4 +38,64 @@ html {
 
 .header ul li {
   list-style: none;
+}
+
+.movie {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  width: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.movie-list {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.movie-list-page {
+  padding: 0 30px;
+}
+
+.movie-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+button {
+  background-color: rgb(216, 169, 12);
+  color: black;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.pagination button {
+  margin: 0 5px;
+  padding: 5px 10px;
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+}
+
+.pagination .active {
+  background-color: orangered;
+}
+
+.pagination button:disabled {
+  background-color: gray;
+  color: white;
+  cursor: not-allowed;
 }
