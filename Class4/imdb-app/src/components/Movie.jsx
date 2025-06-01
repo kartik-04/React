@@ -1,4 +1,17 @@
-const Movie = ({ movie }) => {
+const Movie = ({ movie, watchlist, setWatchlist }) => {
+  const handleWatchListBtnClick = () => {
+    const isInWatchlist = watchlist[movie.id];
+
+    if (isInWatchlist) {
+      // Remove from watchlist
+      const updatedWatchlist = { ...watchlist };
+      delete updatedWatchlist[movie.id];
+      setWatchlist(updatedWatchlist);
+    } else {
+      // Add to watchlist
+      setWatchlist({ ...watchlist, [movie.id]: movie });
+    }
+  };
   return (
     <div className="movie">
       <img
@@ -7,7 +20,9 @@ const Movie = ({ movie }) => {
       />
       <div className="movie-info">
         <h3>{movie.title}</h3>
-        <button>+WatchList</button>
+        <button onClick={handleWatchListBtnClick}>
+          {watchlist[movie.id] ? "-" : "+"}watchList
+        </button>
       </div>
     </div>
   );

@@ -3,7 +3,7 @@ import MovieList from "../components/MovieList";
 import { useState } from "react";
 import Pagination from "../components/Pagination";
 
-const MovieListPage = () => {
+const MovieListPage = ({ watchlist, setWatchlist }) => {
   const [movies, setMovies] = useState([]);
   const [totalPages, setTotalPages] = useState(0);
 
@@ -25,7 +25,11 @@ const MovieListPage = () => {
   return (
     <div className="movie-list-page">
       <h1>Movie List Page</h1>
-      <MovieList movies={movies} />
+      <MovieList
+        movies={movies}
+        watchlist={watchlist}
+        setWatchlist={setWatchlist}
+      />
       <Pagination onPageChange={fetchMovies} totalPages={totalPages} />
     </div>
   );

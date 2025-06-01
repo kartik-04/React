@@ -114,3 +114,55 @@ button {
   font-weight: bold;
   color: #666;
 }
+
+.pagination-section {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0px;
+}
+
+.container {
+  display: flex;
+  gap: 1em;
+  padding: 10px 50px;
+}
+
+.container .left-section {
+  width: 20%;
+  display: flex;
+}
+
+.container .right-section {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.container .right-section input {
+  height: 30px;
+  margin: 5px 0;
+  padding: 0 10px;
+}
+
+.container .right-section table {
+  width: 100%;
+}
+
+.genre-list {
+  display: flex;
+  flex: 1;
+  gap: 1em;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.genre {
+  display: flex;
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  cursor: pointer;
+  background-color: aqua;
+  color: black;
+}

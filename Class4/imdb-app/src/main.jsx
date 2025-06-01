@@ -8,16 +8,4 @@ import WatchList from "./pages/WatchList.jsx";
 import MovieDetailsPage from "./pages/MovieDetailsPage.jsx";
 import Header from "./components/Header.jsx";
 
-createRoot(document.getElementById("root")).render(
-  <BrowserRouter>
-    <StrictMode>
-      <Header />
-      <Routes>
-        <Route path="/" element={<MovieListPage />} />
-        <Route path="/details" element={<MovieDetailsPage />} />
-        <Route path="/watchlist" element={<WatchList />} />
-        <Route path="*" element={<h1>Page Not Found</h1>} />
-      </Routes>
-    </StrictMode>
-  </BrowserRouter>
-);
+createRoot(document.getElementById("root")).render(<App />);
